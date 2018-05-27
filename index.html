@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>TAKI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+       <header>
+          <img id= "quit-button" src="images\quit.svg" alt="">
+         <img src="images\logo.png" alt="">
+         <img id= "start-button" src="images\start.svg" alt="">
+       </header>
+    </div>
+    <div class="game-container">
+        <!-- Player 2 -->
+        <div class="player-container" id="playerContainer2">
+        <div class="player-cards-container">
+            <ul class="players-cards">
+            </ul>
+            </div>
+        </div>
+        <!-- / -->
+        <!-- Playing Objects -->
+        <div class="playing-objects-container">
+            <!-- EndTurnButton -->
+            <div id="endTurn-button" style="display:none">
+               end turn
+            </div>
+            <!-- / -->
+            <!-- PlayerImg -->
+            <div id="currentPlayerImg">
+                <img src="images\player1.png" alt="playerimg" id="currentPlayerImgNew" >
+            </div>
+            <!-- / -->
+            <!-- Pile Of Cards -->
+            <div class="pile-of-cards-container" id="pileOfCards" >
+                <div class="pile-cards" >
+                </div>
+            </div>
+            <!-- / -->       
+            <!-- Deck -->
+            <div class="deck-container">
+                <img src="images\cards\deckOfCards.png" alt="Deck" class="deck" id="deck">
+            </div>
+            <!-- / -->
+        </div>
+        <!-- / -->
+        <!-- Player 1 -->
+			  <div class="player-container" id="playerContainer1">
+          <div class="player-cards-container">
+            <ul class="players-cards">
+            </ul>
+          </div>
+        </div>
+        <!-- / -->
+        <div id="topBar">
+            <div id="topBarFirstRow">
+                <div class="statItem">
+                    Timer
+                    <div class="statItem">
+                        <span id="timer" class="topBarItem">
+                            00:00
+                        </span>
+                    </div>
+                </div>
+                <div class="statItem">
+                  Avg move time
+                  <div class="statItemData" id="avgMoveTime">
+                      00:00:00
+                  </div>
+                </div>
+                <div class="statItem">
+                    Reached last card
+                    <div class="statItemData" id="reachedLastCard">
+                        0
+                    </div>
+                </div>
+                <div class="statItem">
+                    Moves
+                    <div class="statItemData" id="Moves">
+                        0
+                    </div>
+                </div>
+          </div>
+        </div>
+    <div id="popupContainer">
+        <div id="colorPopup">
+            <h1 id="popup-text">
+                choose a color
+            </h1>
+            <button id="red-button"></button>
+            <button id="green-button"></button>
+            <button id="yellow-button"></button>
+            <button id="blue-button"></button>
+        </div>
+        <div id="scorePopup">
+            <div class="grid-container">
+                <div class="gridHeader" id="score-popup-header">
+                        <div id="winning-popup-text">
+                            YOU ARE THE WINNER!
+                        </div>
+                        <div id="winning-popup-img">
+                            <img src="images\winner.svg" alt="winning-img" id="scorePopupImg">
+                        </div>
+                </div>
+                <div class="item1 score-first-row">score</div>
+                <div class="item2 score-first-row">Player 1 </div>
+                <div class="item3 score-first-row">Player 2</div>
+                <div class="item4">
+                    <div> Reached last card</div>
+                    <div>Moves</div>
+                    <div> Average move time</div>
+                </div>
+                <div class="item5">
+                    <div id="player1astCard"> 0</div>
+                    <div id="player1Move"> 0</div>
+                    <div id="player1AvgMove"> 00:00:00</div>
+                </div>
+                <div class="item6">
+                    <div id="player2astCard"> 0</div>
+                    <div id="player2Move"> 0</div>
+                    <div id="player2AvgMove"> 00:00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/Card.js"></script>
+<script src="js/Deck.js"></script>
+<script src="js/Stats.js"></script>
+<script src="js/Player.js"></script>
+<script src="js/Computer.js"></script>
+<script src="js/UI.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/GameManager.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
